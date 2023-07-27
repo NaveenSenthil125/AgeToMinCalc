@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val btnDatePicker: Button = findViewById(R.id.btnDatePicker)
         btnDatePicker.setOnClickListener {
-            //call clickDatePicker when this button is clicked
             Toast.makeText(this, "datePicker works", Toast.LENGTH_LONG).show()
            clickDatePicker()
         }
@@ -42,7 +41,6 @@ class MainActivity : AppCompatActivity() {
                     val selectedDateInMinutes = theDate.time / 60000
                     val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
                     currentDate?.let {
-                        // Current date in to minutes.
                         val currentDateToMinutes = currentDate.time / 60000
                         val differenceInMinutes = currentDateToMinutes - selectedDateInMinutes
                         tvSelectedDateInMinutes.text = differenceInMinutes.toString()
